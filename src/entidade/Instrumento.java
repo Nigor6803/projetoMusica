@@ -1,6 +1,7 @@
 package entidade;
 
 public class Instrumento {
+	
 	private String nomeDoInstrumento;
 	
 	public Instrumento() {
