@@ -17,12 +17,12 @@ public class HoraPorTocada {
 		this.horas = horas;
 	}
 	
-	public Date getDiadoAniversario() {
+	public Date getDiaDaApresentacao() {
 		return diaDaApresentacao;
 	}
 	
-	public void setDiaDoAniversario(Date diaDoAniversario) {
-		this.diaDaApresentacao = diaDoAniversario;
+	public void setDiaDaApresentacao(Date DiaDaApresentacao) {
+		this.diaDaApresentacao = DiaDaApresentacao;
 	}
 	
 	public Double getValorPorHora() {

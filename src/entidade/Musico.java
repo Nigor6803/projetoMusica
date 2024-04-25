@@ -1,6 +1,7 @@
 package entidade;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import entidade.enums.NivelProfissional;
@@ -63,4 +64,18 @@ public class Musico {
 	public void removeContratos(HoraPorTocada contrato) {
 		contratoMusical.remove(contrato);
 	}
+	
+	public double rendaFinal(int ano,int mes) {
+		double soma = salarioBase;
+		Calendar cal = Calendar.getInstance();
+		for (HoraPorTocada c : contratoMusical) {
+			cal.setTime(c.getDiaDaApresentacao());
+			int c_ano = cal.get(Calendar.YEAR);
+			int c_mes = 1 + cal.get(Calendar.MONTH);
+			if(ano == c_ano && mes == c_mes) {
+				soma += c.valorTotal();
+			}
+		}
+		return soma;
+	} 
 }
