@@ -65,7 +65,7 @@ public class Musico {
 		contratoMusical.remove(contrato);
 	}
 	
-	public double rendaFinal(int ano,int mes) {
+	public double rendaFinal01(int ano,int mes) {
 		double soma = salarioBase;
 		Calendar cal = Calendar.getInstance();
 		for (HoraPorTocada c : contratoMusical) {
@@ -76,6 +76,14 @@ public class Musico {
 				soma += c.valorTotal();
 			}
 		}
-		return soma;
-	} 
+	return soma;
+	}
+	
+	public double rendaFinal02(int ano,int mes) {
+		double soma = salarioBase;
+		for (HoraPorTocada c :contratoMusical) {
+			soma += c.valorTotal();
+		}
+	return soma;
+	}
 }
