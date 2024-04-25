@@ -49,11 +49,12 @@ public class Progama {
 		
 		System.out.println();
 		
+		int resposta;
 		System.out.println("DESEJA VER QUE RENDA");
 		System.out.println("OPÇÃO 1 - MÊS/ANO");
 		System.out.println("OPÇÃO 2 - VALOR TOTAL");
-		
-		int resposta = edd.nextInt();
+		System.out.print("OPCÃO N°");
+		resposta = edd.nextInt();
 		
 		if(resposta == 1) {
 		
