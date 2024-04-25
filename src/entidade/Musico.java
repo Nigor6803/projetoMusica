@@ -79,7 +79,7 @@ public class Musico {
 	return soma;
 	}
 	
-	public double rendaFinal02(int ano,int mes) {
+	public double rendaFinal02() {
 		double soma = salarioBase;
 		for (HoraPorTocada c :contratoMusical) {
 			soma += c.valorTotal();

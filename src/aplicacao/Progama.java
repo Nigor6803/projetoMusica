@@ -48,6 +48,15 @@ public class Progama {
 		}
 		
 		System.out.println();
+		
+		System.out.println("DESEJA VER QUE RENDA");
+		System.out.println("OPÇÃO 1 - MÊS/ANO");
+		System.out.println("OPÇÃO 2 - VALOR TOTAL");
+		
+		int resposta = edd.nextInt();
+		
+		if(resposta == 1) {
+		
 		System.out.print("MÊS E ANO PARA CALCULAR SALARIO: ");
 		String mesEAno = edd.next();
 		int mes = Integer.parseInt(mesEAno.substring(0,2));
@@ -57,8 +66,16 @@ public class Progama {
 		System.out.println("INSTRUMENTO:"+ musico.getInstrumento().getNomeDoInstrumento());
 		System.out.println("CARGO NA BANDA:" + musico.getNivel());
 		System.out.println("RENDA FINAL DO "+mesEAno+": R$"+String.format("%.2f",musico.rendaFinal01(ano, mes)));
-
+		
+		} else if(resposta == 2)	{
+			
+		System.out.println("NOME:"+ musico.getNome());
+		System.out.println("INSTRUMENTO:"+ musico.getInstrumento().getNomeDoInstrumento());
+		System.out.println("CARGO NA BANDA:" + musico.getNivel());
+		System.out.println("RENDA FINAL DO: R$"+String.format("%.2f",musico.rendaFinal02()));
+		
+		} else {System.out.println("OPÇÃO INVALIDA");
+		}
 		edd.close();
 	}
-
 }
